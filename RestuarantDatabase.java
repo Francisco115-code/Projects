@@ -16,10 +16,10 @@ public class RestuarantDatabase {
 
     
 public static void main(String[] args) {
-    
-String url ="jdbc:sqlserver://LAPTOP-534HVQ9R:1433;databseName=Resturant";
-String username = "sa";
-String password = "Nissan03"; 
+ // Actual login info changed for privacy   
+String url ="jdbc:sqlserver://hostname:1433;databseName=Resturant";
+String username = "username";
+String password = "password"; 
 
 try {
             Connection connection = DriverManager.getConnection(url, username, password);
