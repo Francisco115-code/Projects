@@ -1,0 +1,96 @@
+
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "password";
+$dbname = 'registration';
+
+    $db = mysqli_connect($servername, $username, $password, $dbname);
+?>
+<!DOCTYPE html>
+<!--Registration page for the front end -->
+
+
+<html>
+  <head>
+     <link rel="stylesheet" href="background.css">
+  </head> 
+    <body>
+        <h1>Registration</h1>
+        <p1>Please enter the following information to make an account:</p1>
+        <br>
+        <br>
+        <br>
+        <!-- Dropdown menu form that will allow the user to select either Monroe, Lansing or Baton Rouge CIC-->
+        <link rel="stylesheet" href="dropdown.css">
+        <!-- Dropdown menu that allows the user to select and submit the technical issue-->
+        <form>
+          <?php
+                $query = "SELECT * FROM `Registration_Information`;";
+                $result = mysqli_query($db, $query);
+                while($row = mysqli_fetch_assoc($result)) {
+                      // Display your datas on the page
+                }
+          ?>
+            <label for="CIC Location">Choose CIC Location:</label>
+            <select name="CIC Location" id="CIC Location">
+              <option value="Select">Select</option>
+              <option value="Monroe, Louisiana">Monroe, Louisiana</option>
+              <option value="Baton Rouge">Baton Rouge, Louisiana</option>
+              <option value="Lansing">Lansing, Michigan</option>
+            </select>
+            <br>
+            <br>
+            <input type="submit" value="Submit">
+          </form>
+           <br>
+           <br>
+
+           
+           
+          <form action http://localhost:8080/employeestorage/"">
+           <!--Form that allows the user to input fields to register-->
+
+            <label for="First Name">First Name:</label><br>
+            <input type="First Name" id="First Name" name="First Name"><br>
+
+            <label for="Last Name">Last Name:</label><br>
+            <input type="Last Name" id="Last Name" name="Last Name"><br>
+
+            <label for="Street Address">Street Address</label><br>
+            <input type="Street Address" id="Street Address" name="Street Address"><br>
+
+            <label for="City">City:</label><br>
+            <input type="City" id="City" name="City"><br>
+
+            <label for="State">State:</label><br>
+            <input type="State" id="State" name="State"><br>
+
+
+            <label for="Zipcode">Zipcode:</label><br>
+            <input type="Zipcode" id="Zipcode" name="Zipcode"><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br>
+
+            <label for="username">Username:</label><br>
+            <input type="username" id="username" name="username"><br>
+
+            <label for="pwd">Password:</label><br>
+            <input type="password" id="pwd" name="pwd"><br>
+            
+            <label for="pwd">Confirm Password:</label><br>
+            <input type="password" id="pwd" name="pwd"><br>
+            <p2><b>Please note: Passwords must contain at least 8 characters, 1 uppercase, 1 lowercase, and any of these special characters (@,$,?,!,#)</b></p2><br>
+            <br>
+            <p3><b>Upon registration you will given a unique employee identification number and a registration confirmation identification number to assign you in the system.</b></p3><br><br>
+
+
+            <input type="submit" value="Submit"><br>
+          </form>
+
+          <h2>Need to go to back to the menu? Click Here:</h2>
+            <a href="WelcomePage.html"><button type="button">Main Menu</button></a>
+          
+    </body>
+</html>
