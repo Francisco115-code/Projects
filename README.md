@@ -1,2 +1,2 @@
 # Projects
-Project Portfolio made by Francisco Guzman. 
+Project Portfolio collection made by Francisco Guzman. 
